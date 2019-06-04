@@ -1,0 +1,39 @@
+﻿@model UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*数据验证需要添加下面三行JS代码*@ 
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <form asp-controller="Login" asp-action="PostData" method="post">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td>@Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m=>m.UserName)
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>@Html.PasswordFor(m => m.Passward)
+                @Html.ValidationMessageFor(m=>m.Passward)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

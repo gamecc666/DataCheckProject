@@ -1,0 +1,10 @@
+1：内置的数据验证特性
+   RequiredAttribute(必须的字段）
+   RegularWxpressionAttribute(可以通过正则表达式验证，例如邮箱，电话等)
+   CompareAttribute(和某个特性值比较)
+   RangeAttribute(范围比如数字不能超过多少)
+   MaxAttribute()
+   MinAttribute()
+   StringLengthAttribute()
+   DataTypeAttribute(验证特定类型比如所填内容是不是整数或者小数)
+   
